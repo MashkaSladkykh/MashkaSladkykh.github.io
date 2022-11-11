@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import {Provider} from "react-redux";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import store from './store/configureStore';
+import './scss/index.scss';
+import './App.css';
+import Jobs from "./pages/Jobs";
+
+// import Movies from './pages/Movies';
+// import MoviesExample from "./pages/RoutesMovies/component";
+
+const App = () => (
+  <Provider store={store}>
+    <div>
+    <Jobs/>
     </div>
-  );
-}
+  </Provider>
+);
 
 export default App;
