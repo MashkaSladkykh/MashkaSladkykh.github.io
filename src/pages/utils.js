@@ -5,8 +5,3 @@ export const generateRandomPicture = (min, max) => Math.floor(Math.random() * (M
 
 
 export const convertDate = date => new Date(date).toDateString().split(' ').slice(1).join(' ');
-// export const convertMinutes = mins => {
-//     var hours = Math.trunc(mins/60);
-//     var minutes = mins % 60;
-//     return hours +"h "+ minutes + "m";
-// }

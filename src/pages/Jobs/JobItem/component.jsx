@@ -6,29 +6,30 @@ import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import { convertDate, generateRandomPicture } from '../../utils';
+
 import location from '../../../images/location.svg';
 import rating from '../../../images/rating.svg';
+import saveIcon from '../../../images/save.svg';
 
 
 const JobItem = ({address, name, pictures, title, id, createdAt}) =>( 
- <Card sx={{ maxWidth: 345 }} >
-    <img src={rating} alt="rate" />
-    <p>{convertDate(createdAt)}</p>
-    <CardHeader
+ <Card className='jobs_item' >
+    <img src={rating} alt="rate"  className='jobs_raiting'/>
+    <span className='jobs_date'>{convertDate(createdAt)}</span>
+    <CardHeader style={window.innerWidth > 900 ? {padding:'0'} : {paddingBottom:'0'}}
       avatar={
-        <NavLink to={`jobId=${id}`}>
-          <Avatar >
+          <Avatar className="jobs_avatar" style={window.innerWidth > 900 ? {width: '85px', height: '85px'} : {width: '66px', height: '66px'}}>
             <img src={pictures[generateRandomPicture(0,2)]} alt={title} />
           </Avatar>
-        </NavLink>
       }
       title={
-        <NavLink to={`jobId=${id}`}>{title}</NavLink>}
+        <NavLink to={`jobId=${id}`} className='jobs_title'>{title}</NavLink>}
       subheader={name}
     />
-    <CardContent>
-      <Typography>
-      <img src={location} alt="location" /> {address}
+    <CardContent style={window.innerWidth > 900 ? {padding:'0 0 0 103px'}:{padding:'8px 0 27px 100px'}}>
+      <Typography className='jobs_location__text'>
+        {window.innerWidth > 900 ? <img src={saveIcon} alt='saveIcon' className='jobs_saveIcon'/> : null}
+      <img src={location} alt="location" className='jobs_location__icon'/> {address}
       </Typography>
     </CardContent>
 </Card>)

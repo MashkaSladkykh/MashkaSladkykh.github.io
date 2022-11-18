@@ -1,0 +1,113 @@
+@import './variables.scss';
+.jobs{
+    display: flex;
+    padding: 9px 0;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Proxima Nova', 'Roboto', 'Arial', sans-serif;
+    & .jobs_item{
+        width: 396px;
+        margin-bottom: 8px;
+        background-color: $light-gray;
+        border-radius: 8px;
+    }
+    &_raiting{
+        margin-top: 13px;
+        margin-left: 100px;
+        padding-top: 4px;
+    }
+    &_date{
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        margin-left: 100px;
+        text-align: right;
+    }
+    &_avatar{
+        margin: 2px 19px 0 0;
+        width: 66px;
+        height: 66px;
+    }
+    &_title{
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: $blue;
+        max-width: 712px;
+    }
+    &_location {
+        &__text{
+            font-family: 'Proxima Nova', 'Roboto', 'Arial', sans-serif;
+            color: $gray;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25px;
+            display: flex;
+            align-items: flex-end;
+        }
+        &__icon {
+            padding:8px;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .jobs{
+        padding: 33px 33px 45px;
+        & .jobs_item{
+            width: 90%;
+            min-width: 590px;
+            max-width: 1400px;
+            background-color: $white;
+            padding: 24px 31px 24px 16px;
+            position: relative;
+        }
+        &_raiting{   
+            position: absolute;
+            top: 73px;
+            right: 186px;
+            width: 96px;
+            height: 18px;
+            padding: 0;  
+            margin: 0;       
+        }
+        &_date{
+            position: absolute;
+            right: 16px;
+            bottom: 24px;  
+        }
+        &_avatar{
+            margin: 0;
+        }
+        &_title{
+            font-weight: 700;
+            font-size: 20px;
+            color: $blue;
+            max-width: 712px;
+            padding-bottom: 8px;
+        }
+        &_saveIcon {
+            position: absolute;
+            top: 24px;
+            right: 16px;
+        }
+        & .jobs_location {
+            &__text{
+                font-size: 16px;
+                line-height: 25px;
+            }
+        }
+    }
+}
+
+@media (min-width: 996px) {
+    .jobs{
+        & .jobs_item{
+           width: 90%;
+        }
+    }
+}

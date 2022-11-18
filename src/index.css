@@ -1,8 +1,6 @@
 #root{
     margin: 0 auto;
-    max-width: 380px;
-    background-color: #e6e9f2;
-    display: flex;
-    justify-content: center;
-    padding: 9px 0;
+}
+.container{
+    background-color: #E6E9F2;
 }

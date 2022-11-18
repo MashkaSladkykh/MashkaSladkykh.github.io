@@ -1,8 +1,7 @@
-import {SET_JOBS, SET_JOB_DETAILS} from './types';
+import {SET_JOBS} from './types';
 
 const initialState = {
   jobs: [],
-  jobDetails: {},
 };
 
 export const jobs = (state = initialState, action) => {
@@ -12,12 +11,7 @@ export const jobs = (state = initialState, action) => {
         ...state,
         jobs: action.payload,
       }
-      case SET_JOB_DETAILS:
-        return{
-          ...state,
-          jobDetails: action.payload,
-        }
-
+     
     default:
       return state;
   }
