@@ -13,20 +13,25 @@
     }
     &_raiting{
         margin-top: 13px;
-        margin-left: 100px;
+        margin-left: 101px;
         padding-top: 4px;
     }
     &_date{
         font-family: 'Proxima Nova';
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 25px;
-        margin-left: 100px;
+        margin-left: 101px;
         text-align: right;
+        color: $gray;
+        margin-right: 16px;
     }
-    &_avatar{
-        margin: 2px 19px 0 0;
+    & .jobs_card-header {
+        padding-bottom: 0;
+    }
+    & .jobs_avatar{
+        margin: -44px 0 0 0;
         width: 66px;
         height: 66px;
     }
@@ -39,19 +44,17 @@
         color: $blue;
         max-width: 712px;
     }
-    &_location {
-        &__text{
-            font-family: 'Proxima Nova', 'Roboto', 'Arial', sans-serif;
-            color: $gray;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 25px;
-            display: flex;
-            align-items: flex-end;
-        }
-        &__icon {
-            padding:8px;
-        }
+    & .jobs_card-conent {
+       padding: 8px 0 26px 100px;
+    }
+    & .jobs_location__text{
+        font-family: 'Proxima Nova', 'Roboto', 'Arial', sans-serif;
+        color: $gray;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        display: flex;
+        align-items: flex-end;
     }
 }
 
@@ -77,11 +80,16 @@
         }
         &_date{
             position: absolute;
-            right: 16px;
-            bottom: 24px;  
+            right: 0px;
+            bottom: 22px;  
         }
-        &_avatar{
+        & .jobs_card-header{
+            padding: 0;
+        }
+        & .jobs_avatar{
             margin: 0;
+            width: 85px;
+            height: 85px;
         }
         &_title{
             font-weight: 700;
@@ -89,6 +97,10 @@
             color: $blue;
             max-width: 712px;
             padding-bottom: 8px;
+            margin-left: 9px;
+        }
+        & #jobs_card-conent{
+            padding: 0 0 7px 103px;
         }
         &_saveIcon {
             position: absolute;

@@ -5,20 +5,29 @@ import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
-import { convertDate, generateRandomPicture } from '../../utils';
+import moment from 'moment';
+import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
+import json2mq from 'json2mq';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import PlaceIcon from '@mui/icons-material/Place';
 
-import location from '../../../images/location.svg';
+import {generateRandomPicture } from '../../utils';
 import rating from '../../../images/rating.svg';
-import saveIcon from '../../../images/save.svg';
 
 
-const JobItem = ({address, name, pictures, title, id, createdAt}) =>( 
- <Card className='jobs_item' >
+
+const JobItem = ({address, name, pictures, title, id, createdAt}) =>{ 
+  const matches = useMediaQuery(
+    json2mq({
+      minWidth: 600,
+    }));
+
+ return <Card className='jobs_item' >
     <img src={rating} alt="rate"  className='jobs_raiting'/>
-    <span className='jobs_date'>{convertDate(createdAt)}</span>
-    <CardHeader style={window.innerWidth > 900 ? {padding:'0'} : {paddingBottom:'0'}}
+    <span className='jobs_date'>Posted {moment(createdAt).fromNow()}</span>
+    <CardHeader className='jobs_card-header'
       avatar={
-          <Avatar className="jobs_avatar" style={window.innerWidth > 900 ? {width: '85px', height: '85px'} : {width: '66px', height: '66px'}}>
+          <Avatar className="jobs_avatar">
             <img src={pictures[generateRandomPicture(0,2)]} alt={title} />
           </Avatar>
       }
@@ -26,12 +35,12 @@ const JobItem = ({address, name, pictures, title, id, createdAt}) =>(
         <NavLink to={`jobId=${id}`} className='jobs_title'>{title}</NavLink>}
       subheader={name}
     />
-    <CardContent style={window.innerWidth > 900 ? {padding:'0 0 0 103px'}:{padding:'8px 0 27px 100px'}}>
+    <CardContent id="jobs_card-conent">
       <Typography className='jobs_location__text'>
-        {window.innerWidth > 900 ? <img src={saveIcon} alt='saveIcon' className='jobs_saveIcon'/> : null}
-      <img src={location} alt="location" className='jobs_location__icon'/> {address}
+        {matches ? <BookmarkBorderOutlinedIcon className='jobs_saveIcon' />: null}
+      <PlaceIcon className='jobs_location__icon'/> {address}
       </Typography>
     </CardContent>
-</Card>)
+</Card>}
 
 export default JobItem;

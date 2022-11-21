@@ -46,7 +46,7 @@
         line-height: 30px;
         color: $blue;
         max-width: 363px;
-        margin-bottom: 5px;
+        margin-bottom: 20px;
     }
     &_updated {
         font-size: 13px;
@@ -59,6 +59,9 @@
             font-size: 18px;
             line-height: 24px;
             color: $text-blue;
+            position: absolute;
+            right: 63px;
+            top: 275px;
         }
         &__sum{
             font-weight: 700;
@@ -66,14 +69,17 @@
             line-height: 25px;
             color: $blue;
             text-align: right;
-            padding-right: 55px;
+            padding-right: 44px;
+            position: absolute;
+            top: 304px;
+            right: 57px;
         }
     }
     &_description {
         font-size: 18px;
         line-height: 24px;
         color: $text-blue;
-        padding: 14px 16px 28px 0;
+        padding: 26px 16px 26px 0;
     }
     &_button{
         display: flex;
@@ -81,7 +87,7 @@
         align-items: center;
         margin-bottom: 135px;
         &__apply{
-            padding: 18px 30px;
+            padding: 17px 30px;
             border: none;
             border-radius: 8px;
             color: $white;
@@ -89,6 +95,10 @@
             text-transform: uppercase;
             font-size: 12px;
             line-height: 16px;
+            &:hover {
+                opacity: 0.3;
+                cursor: pointer;
+            }
         }
     }
     &_images{
@@ -126,7 +136,7 @@
     }
     &_benefits{
         margin-top: 22px;
-        margin-bottom: 63px;
+        margin-bottom: 58px;
         &__item{
             display: inline-block;
             background: $light-yellow;
@@ -150,8 +160,9 @@
             color: $text-white;
             padding: 31px 0 17px 62px;
         }
-        & img {
-            margin-left: 62px;
+        & svg {
+            margin-left: 55px;
+            color: #D8D8D8
         }
         &__location{
             font-size: 16px;
@@ -179,6 +190,7 @@
         & iframe{
             width: 100%;
             border: none;
+            height: 204px;
         }
     }
 }
@@ -203,6 +215,11 @@
            position: absolute;
            top: 0px;
            left: 300px;
+           margin-top: 15px;
+           & svg, img{
+                width: 27px;
+                height: 27px;
+            }
         }
         &_title{
             max-width: 500px;
@@ -210,25 +227,26 @@
         }
         &_updated {
            padding: 7px 0; 
+           font-size: 16px;
         }
         &_salary {
             &__text{
                 position: absolute;
-                top: 207px;
-                left: 560px;
+                top: 171px;
+                left: 557px;
             }
             &__sum{
                 position: absolute;
-                left: 560px;
-                top:190px;
+                left: 574px;
+                top: 145px;
             }
         }
         &_description {
-           padding-top: 0;
+           padding-top: 7px;
            max-width: 721px; 
            padding-bottom: 0;
         }
-        &_additional {
+        &_add {
             margin-top: 86px;
         }
         &_contacts{
@@ -258,13 +276,36 @@
                 margin-bottom: 25px;
             }
         }
+        &_return  a{
+            position: absolute;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $blue;
+            background-color: #e4e5ea;
+            background-image: url('../images/arrow.svg');
+            border: none;
+            border-radius: 8px;
+            padding: 18px 26px 16px 56px;
+            background-repeat: no-repeat;
+            background-position: 10px;
+            cursor: pointer;
+            margin-top: 35px;
+            left: -77px;
+            &:hover{
+                background-color: $blue;
+                color: $text-white;
+                opacity: 0.8;
+            }
+        }
     }
 }
 
 @media (min-width: 900px) {
     .details{
         &_actions{
-           left: 476px;
+            left: 467px;
         }
         &_button {
             margin-top: 39px;
@@ -276,7 +317,6 @@
         }
         &_images{      
             & img{
-               width: 200px;
                height: 116px; 
             }
         }
@@ -289,7 +329,7 @@
         }
         &_benefits{
             margin-top: 23px;
-            margin-bottom: 87px;
+            margin-bottom: 82px;
             &__item{
                 width: 200px;
                 padding: 17px; 

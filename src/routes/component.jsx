@@ -1,6 +1,7 @@
 import {Route, Routes} from "react-router-dom";
 import Jobs from "../pages/Jobs";
 import JobDetails from "../pages/JobDetails";
+import Error from "../pages/Error";
 
 
 const JobApp = () => {
@@ -12,7 +13,7 @@ const JobApp = () => {
           path="*"
           element={
             <main style={{padding: "1rem"}}>
-              <p>There's nothing here!</p>
+              <Error/>
             </main>
           }
         />
