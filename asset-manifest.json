@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/MashkaSladkykh/job/static/css/main.f2ea7e0f.css",
+    "main.js": "/MashkaSladkykh/job/static/js/main.8b99486c.js",
+    "static/js/787.c6b02a0f.chunk.js": "/MashkaSladkykh/job/static/js/787.c6b02a0f.chunk.js",
+    "static/media/ProximaNova-Light.ttf": "/MashkaSladkykh/job/static/media/ProximaNova-Light.4e6430d1b1cdd53aab1d.ttf",
+    "static/media/ProximaNova-Semibold.ttf": "/MashkaSladkykh/job/static/media/ProximaNova-Semibold.dfa26f09d155df035c98.ttf",
+    "static/media/ProximaNova-Regular.ttf": "/MashkaSladkykh/job/static/media/ProximaNova-Regular.db098dc77c7aafe660e5.ttf",
+    "static/media/ProximaNova-Bold.ttf": "/MashkaSladkykh/job/static/media/ProximaNova-Bold.f3c7fec78a9f7f598801.ttf",
+    "static/media/ProximaNova-Light.woff": "/MashkaSladkykh/job/static/media/ProximaNova-Light.7990e5187e35346a1a41.woff",
+    "static/media/ProximaNova-Regular.woff": "/MashkaSladkykh/job/static/media/ProximaNova-Regular.3d59ce3e9d6f49acb285.woff",
+    "static/media/ProximaNova-Bold.woff": "/MashkaSladkykh/job/static/media/ProximaNova-Bold.7bbe1c8847f08b1633a0.woff",
+    "static/media/ProximaNova-Semibold.woff": "/MashkaSladkykh/job/static/media/ProximaNova-Semibold.9d060ce65c8a91d38e21.woff",
+    "static/media/ProximaNova-Regular.woff2": "/MashkaSladkykh/job/static/media/ProximaNova-Regular.c4c3616c5577f9e7ef87.woff2",
+    "static/media/ProximaNova-Light.woff2": "/MashkaSladkykh/job/static/media/ProximaNova-Light.862957f462a3cd712229.woff2",
+    "static/media/ProximaNova-Bold.woff2": "/MashkaSladkykh/job/static/media/ProximaNova-Bold.c84883dfcd4817e310df.woff2",
+    "static/media/ProximaNova-Semibold.woff2": "/MashkaSladkykh/job/static/media/ProximaNova-Semibold.54b9eb90d4b941f9371e.woff2",
+    "static/media/rating.svg": "/MashkaSladkykh/job/static/media/rating.13901b5a4b80a3ededba2a0234f12a79.svg",
+    "index.html": "/MashkaSladkykh/job/index.html",
+    "static/media/arrow.svg": "/MashkaSladkykh/job/static/media/arrow.81b0f26cb6486aa14408.svg",
+    "main.f2ea7e0f.css.map": "/MashkaSladkykh/job/static/css/main.f2ea7e0f.css.map",
+    "main.8b99486c.js.map": "/MashkaSladkykh/job/static/js/main.8b99486c.js.map",
+    "787.c6b02a0f.chunk.js.map": "/MashkaSladkykh/job/static/js/787.c6b02a0f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f2ea7e0f.css",
+    "static/js/main.8b99486c.js"
+  ]
+}
