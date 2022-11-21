@@ -1,8 +1,8 @@
 {
   "name": "jobs",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://github.com/MashkaSladkykh/job",
+  "private": false,
+  "homepage": "https://github.com/MashkaSladkykh/MashkaSladkykh.github.io",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
