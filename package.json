@@ -2,7 +2,7 @@
   "name": "jobs",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://github.com/MashkaSladkykh/MashkaSladkykh.github.io",
+  "homepage": "/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
