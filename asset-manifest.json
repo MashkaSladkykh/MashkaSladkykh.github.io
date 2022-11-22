@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.394d9f4f.css",
-    "main.js": "/static/js/main.c33f82ab.js",
-    "static/js/787.c6b02a0f.chunk.js": "/static/js/787.c6b02a0f.chunk.js",
-    "static/media/ProximaNova-Light.ttf": "/static/media/ProximaNova-Light.4e6430d1b1cdd53aab1d.ttf",
-    "static/media/ProximaNova-Semibold.ttf": "/static/media/ProximaNova-Semibold.dfa26f09d155df035c98.ttf",
-    "static/media/ProximaNova-Regular.ttf": "/static/media/ProximaNova-Regular.db098dc77c7aafe660e5.ttf",
-    "static/media/ProximaNova-Bold.ttf": "/static/media/ProximaNova-Bold.f3c7fec78a9f7f598801.ttf",
-    "static/media/ProximaNova-Light.woff": "/static/media/ProximaNova-Light.7990e5187e35346a1a41.woff",
-    "static/media/ProximaNova-Regular.woff": "/static/media/ProximaNova-Regular.3d59ce3e9d6f49acb285.woff",
-    "static/media/ProximaNova-Bold.woff": "/static/media/ProximaNova-Bold.7bbe1c8847f08b1633a0.woff",
-    "static/media/ProximaNova-Semibold.woff": "/static/media/ProximaNova-Semibold.9d060ce65c8a91d38e21.woff",
-    "static/media/ProximaNova-Regular.woff2": "/static/media/ProximaNova-Regular.c4c3616c5577f9e7ef87.woff2",
-    "static/media/ProximaNova-Light.woff2": "/static/media/ProximaNova-Light.862957f462a3cd712229.woff2",
-    "static/media/ProximaNova-Bold.woff2": "/static/media/ProximaNova-Bold.c84883dfcd4817e310df.woff2",
-    "static/media/ProximaNova-Semibold.woff2": "/static/media/ProximaNova-Semibold.54b9eb90d4b941f9371e.woff2",
-    "static/media/rating.svg": "/static/media/rating.13901b5a4b80a3ededba2a0234f12a79.svg",
-    "index.html": "/index.html",
-    "static/media/arrow.svg": "/static/media/arrow.81b0f26cb6486aa14408.svg",
-    "main.394d9f4f.css.map": "/static/css/main.394d9f4f.css.map",
-    "main.c33f82ab.js.map": "/static/js/main.c33f82ab.js.map",
-    "787.c6b02a0f.chunk.js.map": "/static/js/787.c6b02a0f.chunk.js.map"
+    "main.css": "/jobs/static/css/main.66558d82.css",
+    "main.js": "/jobs/static/js/main.58f3026a.js",
+    "static/js/787.c6b02a0f.chunk.js": "/jobs/static/js/787.c6b02a0f.chunk.js",
+    "static/media/ProximaNova-Light.ttf": "/jobs/static/media/ProximaNova-Light.4e6430d1b1cdd53aab1d.ttf",
+    "static/media/ProximaNova-Semibold.ttf": "/jobs/static/media/ProximaNova-Semibold.dfa26f09d155df035c98.ttf",
+    "static/media/ProximaNova-Regular.ttf": "/jobs/static/media/ProximaNova-Regular.db098dc77c7aafe660e5.ttf",
+    "static/media/ProximaNova-Bold.ttf": "/jobs/static/media/ProximaNova-Bold.f3c7fec78a9f7f598801.ttf",
+    "static/media/ProximaNova-Light.woff": "/jobs/static/media/ProximaNova-Light.7990e5187e35346a1a41.woff",
+    "static/media/ProximaNova-Regular.woff": "/jobs/static/media/ProximaNova-Regular.3d59ce3e9d6f49acb285.woff",
+    "static/media/ProximaNova-Bold.woff": "/jobs/static/media/ProximaNova-Bold.7bbe1c8847f08b1633a0.woff",
+    "static/media/ProximaNova-Semibold.woff": "/jobs/static/media/ProximaNova-Semibold.9d060ce65c8a91d38e21.woff",
+    "static/media/ProximaNova-Regular.woff2": "/jobs/static/media/ProximaNova-Regular.c4c3616c5577f9e7ef87.woff2",
+    "static/media/ProximaNova-Light.woff2": "/jobs/static/media/ProximaNova-Light.862957f462a3cd712229.woff2",
+    "static/media/ProximaNova-Bold.woff2": "/jobs/static/media/ProximaNova-Bold.c84883dfcd4817e310df.woff2",
+    "static/media/ProximaNova-Semibold.woff2": "/jobs/static/media/ProximaNova-Semibold.54b9eb90d4b941f9371e.woff2",
+    "static/media/rating.svg": "/jobs/static/media/rating.13901b5a4b80a3ededba2a0234f12a79.svg",
+    "index.html": "/jobs/index.html",
+    "static/media/arrow.svg": "/jobs/static/media/arrow.81b0f26cb6486aa14408.svg",
+    "main.66558d82.css.map": "/jobs/static/css/main.66558d82.css.map",
+    "main.58f3026a.js.map": "/jobs/static/js/main.58f3026a.js.map",
+    "787.c6b02a0f.chunk.js.map": "/jobs/static/js/787.c6b02a0f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.394d9f4f.css",
-    "static/js/main.c33f82ab.js"
+    "static/css/main.66558d82.css",
+    "static/js/main.58f3026a.js"
   ]
 }
