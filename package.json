@@ -25,6 +25,9 @@
     "sass": "^1.56.1",
     "web-vitals": "^2.1.4"
   },
+  "engines": {
+    "node": "18.12.1"
+  },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
