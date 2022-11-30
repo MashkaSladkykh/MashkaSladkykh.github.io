@@ -97,7 +97,6 @@
             color: $blue;
             max-width: 712px;
             padding-bottom: 8px;
-            margin-left: 9px;
         }
         & #jobs_card-conent{
             padding: 0 0 7px 103px;
@@ -106,11 +105,16 @@
             position: absolute;
             top: 24px;
             right: 16px;
+            &:hover {
+                stroke: $light-gray;
+                cursor: pointer;
+            }
         }
         & .jobs_location {
             &__text{
                 font-size: 16px;
                 line-height: 25px;
+                align-items: normal;
             }
         }
     }
