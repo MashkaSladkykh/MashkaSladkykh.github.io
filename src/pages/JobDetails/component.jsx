@@ -19,17 +19,16 @@ import Error from '../Error';
 const JobDetails= () => {
   let { jobId } = useParams();
   let [ , hash] = jobId.split('=');
-  const jobs = useSelector(state => state.jobs.jobs);
+  const jobs = JSON.parse(localStorage.reduxState).jobs.jobs;
   const matches = useMediaQuery(
     json2mq({
       minWidth: 600,
     }));
   
-    const detailedJob = jobs.filter(({id}) => id === hash );
-    const [{address, benefits, description, email, employment_type, location, name, phone, pictures, salary, title, updatedAt}] = detailedJob;
+  const detailedJob = jobs.find(({id}) => id === hash);
 
   return <div className="container_details">
-    {jobs.length !== 0 ? 
+    {detailedJob !== undefined && localStorage.reduxState.length !== 0 ? 
       <div className="details" key={nanoid()}>
         <div>
           <h2 className="details_head">Job Details</h2>
@@ -45,25 +44,25 @@ const JobDetails= () => {
             <span>Share</span>
           </div>
           {matches ? <Button/> :null}
-          <h3 className="details_title">{title}</h3>
-          <span className="details_updated">Posted {moment(updatedAt).fromNow()}</span>
+          <h3 className="details_title">{detailedJob.title}</h3>
+          <span className="details_updated">Posted {moment(detailedJob.updatedAt).fromNow()}</span>
           <span className="details_salary__text">Brutto per year</span>
-          <p className="details_salary__sum">{salary}</p>
-          <p className="details_description">{description}</p>
+          <p className="details_salary__sum">{detailedJob.salary}</p>
+          <p className="details_description">{detailedJob.description}</p>
           <Button/>
           {!matches ? <>
-            <AttachedImages images={pictures} name={name}/>
-            <AdditionalInfo type={employment_type} benefits={benefits} />
+            <AttachedImages images={detailedJob.pictures} name={detailedJob.name}/>
+            <AdditionalInfo type={detailedJob.employment_type} benefits={detailedJob.benefits} />
           </> : 
           <>
-            <AdditionalInfo type={employment_type} benefits={benefits} />
-            <AttachedImages images={pictures} name={name}/>
+            <AdditionalInfo type={detailedJob.employment_type} benefits={detailedJob.benefits} />
+            <AttachedImages images={detailedJob.pictures} name={detailedJob.name}/>
             <Return/>
           </>}
         </div>
         <div>
         {!matches ? <h2>Contacts</h2> : null }
-          <Contacts name={name} address={address} phone={phone} email={email} location={location} />
+          <Contacts name={detailedJob.name} address={detailedJob.address} phone={detailedJob.phone} email={detailedJob.email} location={detailedJob.location} />
         </div>
       </div>
     : <Error/> }
