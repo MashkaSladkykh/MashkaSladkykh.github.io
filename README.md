@@ -12,3 +12,4 @@ You may also see any lint errors in the console.
 
 ## See deployed project by link:
 ### link
+https://mashkasladkykh.github.io/jobs/
