@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/jobs/static/css/main.66558d82.css",
-    "main.js": "/jobs/static/js/main.58f3026a.js",
+    "main.css": "/jobs/static/css/main.019ee0a9.css",
+    "main.js": "/jobs/static/js/main.6cb9bb7c.js",
     "static/js/787.c6b02a0f.chunk.js": "/jobs/static/js/787.c6b02a0f.chunk.js",
     "static/media/ProximaNova-Light.ttf": "/jobs/static/media/ProximaNova-Light.4e6430d1b1cdd53aab1d.ttf",
     "static/media/ProximaNova-Semibold.ttf": "/jobs/static/media/ProximaNova-Semibold.dfa26f09d155df035c98.ttf",
@@ -18,12 +18,12 @@
     "static/media/rating.svg": "/jobs/static/media/rating.13901b5a4b80a3ededba2a0234f12a79.svg",
     "index.html": "/jobs/index.html",
     "static/media/arrow.svg": "/jobs/static/media/arrow.81b0f26cb6486aa14408.svg",
-    "main.66558d82.css.map": "/jobs/static/css/main.66558d82.css.map",
-    "main.58f3026a.js.map": "/jobs/static/js/main.58f3026a.js.map",
+    "main.019ee0a9.css.map": "/jobs/static/css/main.019ee0a9.css.map",
+    "main.6cb9bb7c.js.map": "/jobs/static/js/main.6cb9bb7c.js.map",
     "787.c6b02a0f.chunk.js.map": "/jobs/static/js/787.c6b02a0f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.66558d82.css",
-    "static/js/main.58f3026a.js"
+    "static/css/main.019ee0a9.css",
+    "static/js/main.6cb9bb7c.js"
   ]
 }
