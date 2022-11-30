@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useSelector} from 'react-redux';
 import { useParams } from "react-router-dom";
 import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
 import ShareIcon from '@mui/icons-material/Share';
