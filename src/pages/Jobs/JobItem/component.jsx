@@ -11,7 +11,7 @@ import json2mq from 'json2mq';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import PlaceIcon from '@mui/icons-material/Place';
 
-import {generateRandomPicture } from '../../utils';
+import {generateRandomNumber} from '../../utils';
 import rating from '../../../images/rating.svg';
 
 
@@ -28,7 +28,7 @@ const JobItem = ({address, name, pictures, title, id, createdAt}) =>{
     <CardHeader className='jobs_card-header'
       avatar={
           <Avatar className="jobs_avatar">
-            <img src={pictures[generateRandomPicture(0,2)]} alt={title} />
+            <img src={pictures[generateRandomNumber(0,2)]} alt={title} />
           </Avatar>
       }
       title={
