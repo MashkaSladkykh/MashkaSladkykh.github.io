@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
 import ShareIcon from '@mui/icons-material/Share';
 import json2mq from 'json2mq';
@@ -26,28 +26,28 @@ const JobDetails= () => {
   
   const detailedJob = jobs.find(({id}) => id === hash);
 
-  return <div className="container_details">
+  return <div className='container_details'>
     {detailedJob !== undefined && localStorage.reduxState.length !== 0 ? 
-      <div className="details" key={nanoid()}>
+      <div className='details' key={nanoid()}>
         <div>
-          <h2 className="details_head">Job Details</h2>
-          <div className="details_actions">
+          <h2 className='details_head'>Job Details</h2>
+          <div className='details_actions'>
             {matches ? <> 
-              <BookmarkBorderOutlinedIcon className="details_actions__save"/>
+              <BookmarkBorderOutlinedIcon className='details_actions__save'/>
               <span>Save to my list</span> 
             </> : <>
-              <StarBorderOutlinedIcon className="details_actions__save"/>
+              <StarBorderOutlinedIcon className='details_actions__save'/>
               <span>Save to my list</span> 
             </>}
-            <ShareIcon className="details_actions__share"/> 
+            <ShareIcon className='details_actions__share'/> 
             <span>Share</span>
           </div>
           {matches ? <Button/> :null}
-          <h3 className="details_title">{detailedJob.title}</h3>
-          <span className="details_updated">Posted {moment(detailedJob.updatedAt).fromNow()}</span>
-          <span className="details_salary__text">Brutto per year</span>
-          <p className="details_salary__sum">{detailedJob.salary}</p>
-          <p className="details_description">{detailedJob.description}</p>
+          <h3 className='details_title'>{detailedJob.title}</h3>
+          <span className='details_updated'>Posted {moment(detailedJob.updatedAt).fromNow()}</span>
+          <span className='details_salary__text'>Brutto per year</span>
+          <p className='details_salary__sum'>{detailedJob.salary}</p>
+          <p className='details_description'>{detailedJob.description}</p>
           <Button/>
           {!matches ? <>
             <AttachedImages images={detailedJob.pictures} name={detailedJob.name}/>

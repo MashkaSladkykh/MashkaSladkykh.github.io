@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
@@ -8,7 +8,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import {selectJobs} from '../../store/jobs/selectors';
 import {setJobs} from '../../store/jobs/actions';
 import {generateApiUrl} from '../utils';
-import JobItem from "./JobItem";
+import JobItem from './JobItem';
 
 
 const Jobs = ({jobsList, setJobs}) => {  
@@ -39,8 +39,8 @@ const Jobs = ({jobsList, setJobs}) => {
   );
   
   return (
-    <main className="container">
-      <div className="jobs">
+    <main className='container'>
+      <div className='jobs'>
         {jobsList.length === 0 && (
           <div>Empty list</div>
         )}
@@ -50,7 +50,7 @@ const Jobs = ({jobsList, setJobs}) => {
       </div>
       {matches && jobsList.length !== 0 ? 
       <Stack spacing={2}>
-        <Pagination shape="rounded" size="large" className="pagination" count={18} page={page} onChange={handleChange}/>
+        <Pagination shape='rounded' size='large' className='pagination' count={18} page={page} onChange={handleChange}/>
       </Stack> : null}
     </main>
   )

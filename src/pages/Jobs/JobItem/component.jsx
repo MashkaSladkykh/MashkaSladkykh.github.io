@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
@@ -23,11 +23,11 @@ const JobItem = ({address, name, pictures, title, id, createdAt}) =>{
     }));
 
  return <Card className='jobs_item' >
-    <img src={rating} alt="rate"  className='jobs_raiting'/>
+    <img src={rating} alt='rate'  className='jobs_raiting'/>
     <span className='jobs_date'>Posted {moment(createdAt).fromNow()}</span>
     <CardHeader className='jobs_card-header'
       avatar={
-          <Avatar className="jobs_avatar">
+          <Avatar className='jobs_avatar'>
             <img src={pictures[generateRandomNumber(0,2)]} alt={title} />
           </Avatar>
       }
@@ -35,7 +35,7 @@ const JobItem = ({address, name, pictures, title, id, createdAt}) =>{
         <NavLink to={`jobId=${id}`} className='jobs_title'>{title}</NavLink>}
       subheader={name}
     />
-    <CardContent id="jobs_card-conent">
+    <CardContent id='jobs_card-conent'>
       <Typography className='jobs_location__text'>
         {matches ? <BookmarkBorderOutlinedIcon className='jobs_saveIcon' />: null}
       <PlaceIcon className='jobs_location__icon'/> {address}
