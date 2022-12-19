@@ -1,4 +1,4 @@
-import {SET_JOBS} from './types';
+import { SET_JOBS } from './types';
 
 const initialState = {
   jobs: [],
@@ -10,9 +10,9 @@ export const jobs = (state = initialState, action) => {
       return {
         ...state,
         jobs: action.payload,
-      }
-     
+      };
+
     default:
       return state;
   }
-}
+};
