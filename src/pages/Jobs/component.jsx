@@ -29,6 +29,8 @@ const Jobs = ({ jobsList, setJobs }) => {
   const handleChange = (event, value) => {
     setPage(value);
   };
+  
+  const count = 18;
 
   const generateStartPosition = (page) => (page % 2 ? 0 : 10);
 
@@ -60,7 +62,7 @@ const Jobs = ({ jobsList, setJobs }) => {
             shape='rounded'
             size='large'
             className='pagination'
-            count={18}
+            count={count}
             page={page}
             onChange={handleChange}
           />
