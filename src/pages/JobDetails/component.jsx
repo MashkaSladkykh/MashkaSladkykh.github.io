@@ -8,6 +8,7 @@ import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlin
 import { nanoid } from 'nanoid';
 
 import {Error} from '../Error/component';
+import store from '../../store/configureStore';
 
 import {Button} from './Button/component';
 import {AttachedImages} from './AttachedImages/component';
@@ -18,7 +19,7 @@ import {Return} from './Return/component';
 export const JobDetails = () => {
   const { jobId } = useParams();
   const [, hash] = jobId.split('=');
-  const jobs = JSON.parse(localStorage.reduxState).jobs.jobs;
+  const jobs = store.getState().jobs.jobs;
   const matches = useMediaQuery(
     json2mq({
       minWidth: 600,
