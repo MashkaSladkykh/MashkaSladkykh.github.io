@@ -4,6 +4,7 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import json2mq from 'json2mq';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { nanoid } from 'nanoid';
 
 import { selectJobs } from '../../store/jobs/selectors';
 import { setJobs } from '../../store/jobs/actions';
@@ -17,12 +18,29 @@ const Jobs = ({ jobsList, setJobs }) => {
       minWidth: 600,
     })
   );
+  const modifiedData =(data) =>([
+    ...data.map((job) => ({ 
+      ...job, 
+      pictures: job.pictures.map((picture) => ({
+        id: nanoid(), 
+        url: picture 
+      })),
+      benefits: job.benefits.map((benefit) => ({
+        id: nanoid(),
+        item: benefit
+      })),
+      employment_type: job.employment_type.map((type) => ({
+        id: nanoid(),
+        type:type
+      }))
+    }))
+  ] )
 
   useEffect(() => {
     fetch(generateApiUrl())
       .then((res) => res.json())
       .then((data) => {
-        setJobs(data);
+        setJobs(modifiedData(data))
       });
   }, [page]);
 
@@ -35,6 +53,8 @@ const Jobs = ({ jobsList, setJobs }) => {
   const generateStartPosition = (page) => (page % 2 ? 0 : 10);
 
   const generateEndPosition = (page) => (page % 2 ? 10 : 20);
+
+  console.log(jobsList)
 
   return (
     <main className='container'>
