@@ -7,14 +7,14 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
 import { nanoid } from 'nanoid';
 
-import Button from './Button';
-import AttachedImages from './AttachedImages';
-import AdditionalInfo from './AdditionalInfo';
-import Contacts from './Contacts';
-import Return from './Return';
-import Error from '../Error';
+import {Button} from './Button/component';
+import {AttachedImages} from './AttachedImages/component';
+import {AdditionalInfo} from './AdditionalInfo/component';
+import {Contacts} from './Contacts/component';
+import {Return} from './Return/component';
+import {Error} from '../Error/component';
 
-const JobDetails = () => {
+export const JobDetails = () => {
   let { jobId } = useParams();
   let [, hash] = jobId.split('=');
   const jobs = JSON.parse(localStorage.reduxState).jobs.jobs;
@@ -101,5 +101,3 @@ const JobDetails = () => {
     </div>
   );
 };
-
-export default JobDetails;

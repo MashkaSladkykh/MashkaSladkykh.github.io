@@ -14,7 +14,7 @@ import { generateRandomNumber } from '../../utils';
 import rating from '../../../images/rating.svg';
 import {DETAILS} from '../../../routes/constants';
 
-const JobItem = ({ address, name, pictures, title, id, createdAt }) => {
+export const JobItem = ({ address, name, pictures, title, id, createdAt }) => {
   const matches = useMediaQuery(
     json2mq({
       minWidth: 600,
@@ -53,5 +53,3 @@ const JobItem = ({ address, name, pictures, title, id, createdAt }) => {
     </Card>
   );
 };
-
-export default JobItem;

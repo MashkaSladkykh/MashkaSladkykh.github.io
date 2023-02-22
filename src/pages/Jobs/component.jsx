@@ -9,9 +9,9 @@ import { nanoid } from 'nanoid';
 import { selectJobs } from '../../store/jobs/selectors';
 import { setJobs } from '../../store/jobs/actions';
 import { generateApiUrl } from '../utils';
-import JobItem from './JobItem';
+import {JobItem} from './JobItem/component';
 
-const Jobs = ({ jobsList, setJobs }) => {
+export const Jobs = ({ jobsList, setJobs }) => {
   const [page, setPage] = useState(1);
   const matches = useMediaQuery(
     json2mq({

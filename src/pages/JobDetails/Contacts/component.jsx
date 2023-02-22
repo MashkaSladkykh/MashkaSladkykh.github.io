@@ -1,6 +1,6 @@
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
-const Contacts = ({ name, address, phone, email, location }) => (
+export const Contacts = ({ name, address, phone, email, location }) => (
   <div className='details_contacts'>
     <h4>{name}</h4>
     <LocationOnIcon className='jobs_location__icon' />
@@ -17,5 +17,3 @@ const Contacts = ({ name, address, phone, email, location }) => (
     />
   </div>
 );
-
-export default Contacts;

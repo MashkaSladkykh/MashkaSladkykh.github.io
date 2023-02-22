@@ -1,4 +1,4 @@
-const AttachedImages = ({ images, name }) => (
+export const AttachedImages = ({ images, name }) => (
   <>
     <h2>Attached images</h2>
     <div className='details_images'>
@@ -8,5 +8,3 @@ const AttachedImages = ({ images, name }) => (
     </div>
   </>
 );
-
-export default AttachedImages;

@@ -1,4 +1,4 @@
-const AdditionalInfo = ({ type, benefits }) => (
+export const AdditionalInfo = ({ type, benefits }) => (
   <>
     <h2 className='details_add'>Additional info</h2>
     <div className='details_employment'>
@@ -19,5 +19,3 @@ const AdditionalInfo = ({ type, benefits }) => (
     </div>
   </>
 );
-
-export default AdditionalInfo;
