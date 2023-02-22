@@ -11,7 +11,7 @@ const JobApp = () => {
       <Route
         path='*'
         element={
-          <main style={{ padding: '1rem' }}>
+          <main>
             <Error />
           </main>
         }

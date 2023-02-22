@@ -5,3 +5,11 @@
   font-family:'Proxima Nova', 'Roboto', 'Arial', sans-serif;
   text-decoration: none;
 }
+
+.red {
+  color: red;
+}
+
+main {
+  padding: '1rem';
+}
