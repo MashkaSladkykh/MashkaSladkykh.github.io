@@ -12,6 +12,7 @@ import PlaceIcon from '@mui/icons-material/Place';
 
 import { generateRandomNumber } from '../../utils';
 import rating from '../../../images/rating.svg';
+import {DETAILS} from '../../../routes/constants';
 
 const JobItem = ({ address, name, pictures, title, id, createdAt }) => {
   const matches = useMediaQuery(
@@ -35,7 +36,7 @@ const JobItem = ({ address, name, pictures, title, id, createdAt }) => {
           </Avatar>
         }
         title={
-          <NavLink to={`jobId=${id}`} className='jobs_title'>
+          <NavLink to={`${DETAILS}=${id}`} className='jobs_title'>
             {title}
           </NavLink>
         }

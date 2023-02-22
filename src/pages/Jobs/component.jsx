@@ -54,8 +54,6 @@ const Jobs = ({ jobsList, setJobs }) => {
 
   const generateEndPosition = (page) => (page % 2 ? 10 : 20);
 
-  console.log(jobsList)
-
   return (
     <main className='container'>
       <div className='jobs'>
