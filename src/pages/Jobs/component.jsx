@@ -48,11 +48,11 @@ export const Jobs = ({ jobsList, setJobs }) => {
     setPage(value);
   };
   
-  const count = 18;
+  const count = 4;
 
-  const generateStartPosition = (page) => (page % 2 ? 0 : 10);
+  const generateStartPosition = (page) => ((page - 1) * count);
 
-  const generateEndPosition = (page) => (page % 2 ? 10 : 20);
+  const generateEndPosition = (page) => (generateStartPosition(page) + count + 1);
 
   return (
     <main className='container'>
