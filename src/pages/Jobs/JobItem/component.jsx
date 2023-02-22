@@ -5,7 +5,6 @@ import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
-import moment from 'moment';
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
 import json2mq from 'json2mq';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -20,11 +19,14 @@ const JobItem = ({ address, name, pictures, title, id, createdAt }) => {
       minWidth: 600,
     })
   );
+  const dayjs = require('dayjs');
+  const relativeTime = require('dayjs/plugin/relativeTime');
+  dayjs.extend(relativeTime)
 
   return (
     <Card className='jobs_item'>
       <img src={rating} alt='rate' className='jobs_raiting' />
-      <span className='jobs_date'>Posted {moment(createdAt).fromNow()}</span>
+      <span className='jobs_date'>Posted {dayjs(createdAt).fromNow()}</span>
       <CardHeader
         className='jobs_card-header'
         avatar={

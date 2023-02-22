@@ -5,7 +5,6 @@ import ShareIcon from '@mui/icons-material/Share';
 import json2mq from 'json2mq';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
-import moment from 'moment';
 import { nanoid } from 'nanoid';
 
 import Button from './Button';
@@ -24,6 +23,9 @@ const JobDetails = () => {
       minWidth: 600,
     })
   );
+  const dayjs = require('dayjs');
+  const relativeTime = require('dayjs/plugin/relativeTime');
+  dayjs.extend(relativeTime)
 
   const detailedJob = jobs.find(({ id }) => id === hash);
 
@@ -51,7 +53,7 @@ const JobDetails = () => {
             {matches ? <Button /> : null}
             <h3 className='details_title'>{detailedJob.title}</h3>
             <span className='details_updated'>
-              Posted {moment(detailedJob.updatedAt).fromNow()}
+              Posted {dayjs(detailedJob.updatedAt).fromNow()}
             </span>
             <span className='details_salary__text'>Brutto per year</span>
             <p className='details_salary__sum'>{detailedJob.salary}</p>
