@@ -7,16 +7,17 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
 import { nanoid } from 'nanoid';
 
+import {Error} from '../Error/component';
+
 import {Button} from './Button/component';
 import {AttachedImages} from './AttachedImages/component';
 import {AdditionalInfo} from './AdditionalInfo/component';
 import {Contacts} from './Contacts/component';
 import {Return} from './Return/component';
-import {Error} from '../Error/component';
 
 export const JobDetails = () => {
-  let { jobId } = useParams();
-  let [, hash] = jobId.split('=');
+  const { jobId } = useParams();
+  const [, hash] = jobId.split('=');
   const jobs = JSON.parse(localStorage.reduxState).jobs.jobs;
   const matches = useMediaQuery(
     json2mq({
@@ -25,39 +26,39 @@ export const JobDetails = () => {
   );
   const dayjs = require('dayjs');
   const relativeTime = require('dayjs/plugin/relativeTime');
-  dayjs.extend(relativeTime)
+  dayjs.extend(relativeTime);
 
   const detailedJob = jobs.find(({ id }) => id === hash);
 
   return (
-    <div className='container_details'>
+    <div className="container_details">
       {detailedJob !== undefined && localStorage.reduxState.length !== 0 ? (
-        <div className='details' key={nanoid()}>
+        <div className="details" key={nanoid()}>
           <div>
-            <h2 className='details_head'>Job Details</h2>
-            <div className='details_actions'>
+            <h2 className="details_head">Job Details</h2>
+            <div className="details_actions">
               {matches ? (
                 <>
-                  <BookmarkBorderOutlinedIcon className='details_actions__save' />
+                  <BookmarkBorderOutlinedIcon className="details_actions__save" />
                   <span>Save to my list</span>
                 </>
               ) : (
                 <>
-                  <StarBorderOutlinedIcon className='details_actions__save' />
+                  <StarBorderOutlinedIcon className="details_actions__save" />
                   <span>Save to my list</span>
                 </>
               )}
-              <ShareIcon className='details_actions__share' />
+              <ShareIcon className="details_actions__share" />
               <span>Share</span>
             </div>
             {matches ? <Button /> : null}
-            <h3 className='details_title'>{detailedJob.title}</h3>
-            <span className='details_updated'>
+            <h3 className="details_title">{detailedJob.title}</h3>
+            <span className="details_updated">
               Posted {dayjs(detailedJob.updatedAt).fromNow()}
             </span>
-            <span className='details_salary__text'>Brutto per year</span>
-            <p className='details_salary__sum'>{detailedJob.salary}</p>
-            <p className='details_description'>{detailedJob.description}</p>
+            <span className="details_salary__text">Brutto per year</span>
+            <p className="details_salary__sum">{detailedJob.salary}</p>
+            <p className="details_description">{detailedJob.description}</p>
             <Button />
             {!matches ? (
               <>

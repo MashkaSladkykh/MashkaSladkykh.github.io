@@ -9,6 +9,7 @@ import { nanoid } from 'nanoid';
 import { selectJobs } from '../../store/jobs/selectors';
 import { setJobs } from '../../store/jobs/actions';
 import { generateApiUrl } from '../utils';
+
 import {JobItem} from './JobItem/component';
 
 export const Jobs = ({ jobsList, setJobs }) => {
@@ -23,24 +24,24 @@ export const Jobs = ({ jobsList, setJobs }) => {
       ...job, 
       pictures: job.pictures.map((picture) => ({
         id: nanoid(), 
-        url: picture 
+        url: picture, 
       })),
       benefits: job.benefits.map((benefit) => ({
         id: nanoid(),
-        item: benefit
+        item: benefit,
       })),
       employment_type: job.employment_type.map((type) => ({
         id: nanoid(),
-        type:type
-      }))
-    }))
-  ]) // We did this only because we don't have unique keys for these elements
+        type:type,
+      })),
+    })),
+  ]); // We did this only because we don't have unique keys for these elements
 
   useEffect(() => {
     fetch(generateApiUrl())
       .then((res) => res.json())
       .then((data) => {
-        setJobs(modifiedData(data))
+        setJobs(modifiedData(data));
       });
   }, [page]);
 
@@ -55,8 +56,8 @@ export const Jobs = ({ jobsList, setJobs }) => {
   const generateEndPosition = (page) => (generateStartPosition(page) + count + 1);
 
   return (
-    <main className='container'>
-      <div className='jobs'>
+    <main className="container">
+      <div className="jobs">
         {jobsList.length === 0 && <div>Empty list</div>}
         {jobsList
           .slice(generateStartPosition(page), generateEndPosition(page))
@@ -77,9 +78,9 @@ export const Jobs = ({ jobsList, setJobs }) => {
       {matches && jobsList.length !== 0 ? (
         <Stack spacing={2}>
           <Pagination
-            shape='rounded'
-            size='large'
-            className='pagination'
+            shape="rounded"
+            size="large"
+            className="pagination"
             count={count}
             page={page}
             onChange={handleChange}

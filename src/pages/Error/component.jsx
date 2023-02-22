@@ -5,7 +5,7 @@ import '../../App.css';
 
 export const Error = () => (
   <div>
-    <h2 className='red'>Error</h2>
+    <h2 className="red">Error</h2>
     <Link to={HOME}>Go to the job list </Link>
   </div>
 );
