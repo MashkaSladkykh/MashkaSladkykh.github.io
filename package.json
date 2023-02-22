@@ -4,8 +4,6 @@
   "private": true,
   "homepage": "https://MashkaSladkykh.github.io/jobs",
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.13",
     "@testing-library/jest-dom": "^5.16.5",
@@ -13,7 +11,6 @@
     "@testing-library/user-event": "^13.5.0",
     "dotenv": "^16.0.3",
     "dotenv-expand": "^10.0.0",
-    "core-js": "^2.6.12", 
     "json2mq": "^0.2.0",
     "moment": "^2.29.4",
     "nanoid": "^4.0.0",
