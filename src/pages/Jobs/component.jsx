@@ -34,7 +34,7 @@ const Jobs = ({ jobsList, setJobs }) => {
         type:type
       }))
     }))
-  ] )
+  ]) // We did this only because we don't have unique keys for these elements
 
   useEffect(() => {
     fetch(generateApiUrl())
