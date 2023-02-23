@@ -4,11 +4,12 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import json2mq from 'json2mq';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { nanoid } from 'nanoid';
+
 
 import { selectJobs } from '../../store/jobs/selectors';
 import { setJobs } from '../../store/jobs/actions';
 import { generateApiUrl } from '../utils';
+import { modifiedData } from '../constans';
 
 import {JobItem} from './JobItem/component';
 
@@ -19,23 +20,6 @@ export const Jobs = ({ jobsList, setJobs }) => {
       minWidth: 600,
     })
   );
-  const modifiedData =(data) =>([
-    ...data.map((job) => ({ 
-      ...job, 
-      pictures: job.pictures.map((picture) => ({
-        id: nanoid(), 
-        url: picture, 
-      })),
-      benefits: job.benefits.map((benefit) => ({
-        id: nanoid(),
-        item: benefit,
-      })),
-      employment_type: job.employment_type.map((type) => ({
-        id: nanoid(),
-        type:type,
-      })),
-    })),
-  ]); // We did this only because we don't have unique keys for these elements
 
   useEffect(() => {
     fetch(generateApiUrl())
