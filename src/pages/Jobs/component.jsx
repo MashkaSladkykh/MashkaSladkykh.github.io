@@ -13,7 +13,7 @@ import { modifiedData } from '../constans';
 
 import {JobItem} from './JobItem/component';
 
-export const Jobs = ({ jobsList, setJobs }) => {
+const Jobs = ({ jobsList, setJobs }) => {
   const [page, setPage] = useState(1);
   const matches = useMediaQuery(
     json2mq({
@@ -83,4 +83,4 @@ const mapDispatchToProps = {
   setJobs,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Jobs);
+export const ConnectedComponent = connect(mapStateToProps, mapDispatchToProps)(Jobs);

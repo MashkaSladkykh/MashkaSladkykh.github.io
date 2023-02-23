@@ -8,7 +8,7 @@ import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlin
 import { nanoid } from 'nanoid';
 
 import {Error} from '../Error/component';
-import store from '../../store/configureStore';
+import {store} from '../../store/configureStore';
 
 import {Button} from './Button/component';
 import {AttachedImages} from './AttachedImages/component';
